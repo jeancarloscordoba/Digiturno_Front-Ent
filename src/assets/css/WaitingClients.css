@@ -1,0 +1,23 @@
+.waiting-clients {
+  background-color: #fff;
+  border-radius: 7px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  margin: 7.5px 15px 0px 15px;
+  padding: 13px; /*buscando el padding general*/
+}
+  
+.waiting-clients h3 {
+  margin-bottom: 20px;
+  
+
+}
+
+.waiting-clients ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.waiting-clients li {
+  margin-bottom: 10px;
+}
+  

@@ -1,0 +1,21 @@
+.service-list {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+  }
+  
+  .service-list h2 {
+    margin-bottom: 20px;
+  }
+  
+  .service-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .service-list li {
+    margin-bottom: 10px;
+  }
+  

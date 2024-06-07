@@ -1,0 +1,33 @@
+.dashboard {
+  background-color: #1182c3;  
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+  
+  .main-content {
+    display: flex;
+    flex: 1;
+    padding: 15px;
+  }
+  
+  .left-column,
+  .center-column,
+  .right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .left-column {
+    flex: 1;
+  }
+  
+  .center-column {
+    flex: 3;
+  }
+  
+  .right-column {
+    flex: 1;
+  }
+  
