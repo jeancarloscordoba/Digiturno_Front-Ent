@@ -8,6 +8,7 @@ import '../css/Dashboard.css';
 import { Modal, Button } from 'react-bootstrap';
 import ModuleDistracted from '../components/ModuleDistracted';
 import ModuleVisitors from '../components/ModuleVisitors';
+import ModuleInfo from '../components/ModuleInfo';
 
 const Dashboard: React.FC = () => {
   const [hid, setHid] = useState<HIDDevice | null>(null);
@@ -62,6 +63,7 @@ const Dashboard: React.FC = () => {
       <DashboardHeader />
       <div className="main-content">
         <div className="left-column">
+          <ModuleInfo />
           <ServiceList />
         </div>
         <div className="center-column">

@@ -1,5 +1,6 @@
 import '../css/ClientInfo.css';
 import React, { useState, useEffect } from 'react';
+import '@fortawesome/fontawesome-free/css/all.min.css'; 
 import { Modal} from 'react-bootstrap';
 
 const messages: { [key: number]: string } = {
@@ -74,41 +75,62 @@ const ClientInfo: React.FC<ClientInfoProps> = ({ onRequestDevice, hid }) => {
   };
 
   return (
-    <div className="client-info">
-      <h3>Cliente en atención</h3>
-      <div className="client-details">
-        <p><strong>Información del cliente:</strong></p>
-        <p>C.C.</p>
-      </div>
-      <div className="buttons">
-        <button className="btn green" onClick={startQualification}>Atendido</button>
-        <button className="btn orange" onClick={transferData}>Transferencia</button>
-      </div>
-      <div className="timer">
-        <p>Hora de inicio: 00:00:00</p>
-        <p>Tiempo transcurrido: 00:00:00</p>
-      </div>
-      
-      <Modal
-        show={show}
-        backdrop="static"
-        keyboard={false}
-      >
-        <Modal.Header>
-          <Modal.Title>Procesando</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Esperando calificación...</Modal.Body>
-        <Modal.Footer>
-          {/* Se elimina el botón de cierre */}
-        </Modal.Footer>
-      </Modal>
+    <section className="client-info">
+      <div className="parte-1">
+        <div className="parte-1-1">
+          <h1>Cliente en atención</h1>
+        </div>
 
-      {data !== null && (
-        <p>
-          Datos recibidos del dispositivo: {data}
-        </p>
-      )}
-    </div>
+        <div className="parte-1-2"> 
+          <div className="parte-info-1-2-1">
+            <span className="client-information">Información del Cliente:</span>
+            <span className="c-c">C.C.</span>
+          </div>
+        </div>
+
+          {/* <button className="btn green" onClick={startQualification}>Atendido</button>
+          <button className="btn orange" onClick={transferData}>Transferencia</button> */}
+        <div className="button-container-1-3">
+          <button className="button attended" onClick={startQualification}>
+            <i className="fas fa-check"></i> 
+              ATENDIDO
+          </button>
+          <button className="button transfer" onClick={transferData}>
+            <i className="fas fa-exchange-alt"></i> 
+              TRANSFERIR
+          </button>
+        </div>
+
+        <Modal show={show} backdrop="static" keyboard={false}>
+          <Modal.Header>
+            <Modal.Title>Procesando</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Esperando calificación...</Modal.Body>
+          <Modal.Footer>
+            {/* Se elimina el botón de cierre */}
+          </Modal.Footer>
+        </Modal>
+
+        {data !== null && (
+          <div className="calification-1-4">
+            <p>Datos recibidos del dispositivo: <strong>{data}</strong></p>
+          </div>
+          )
+        }
+      </div>
+
+      <div className="parte-2">
+        <div className="time-section">
+          <p className="text">Hora de Inicio:</p>
+          <p className="time">00:00:00</p>  
+        </div>
+
+        <div className="time-section">
+          <p className="text">Tiempo transcurrido:</p>
+          <p className="time">00:00:00</p>
+        </div>
+      </div>
+    </section>
   );
 }
 

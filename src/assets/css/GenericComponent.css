@@ -1,0 +1,28 @@
+.generic-component {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px; /*padding general*/
+  }
+  
+  .generic-header {
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 5px;
+  }
+  
+  .generic-header h1 {
+    /* background-color: violet; */
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    /* margin-bottom: 15px; */
+  }
+  
+  .generic-content {
+    margin: 0;
+  }

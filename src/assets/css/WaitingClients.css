@@ -1,23 +1,33 @@
 .waiting-clients {
   background-color: #fff;
-  border-radius: 7px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-  margin: 7.5px 15px 0px 15px;
-  padding: 13px; /*buscando el padding general*/
-}
-  
-.waiting-clients h3 {
-  margin-bottom: 20px;
-  
-
+  height: 60%;
+  border-radius: 6px;
+  padding: 15px; /*padding general*/
 }
 
-.waiting-clients ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.waiting-clients li {
+.waiting-clients header {
+  /* background-color: aqua; */
   margin-bottom: 10px;
 }
+.waiting-clients h1 {
+  /* background-color: blue; */
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.waiting-clients main {
+  /* background-color: springgreen; */
+  margin: 0;
+}
+.waiting-clients ul {
+  /* background-color: yellow; */
+  list-style-type: none; /* Quitar puntos de la lista */
+  padding-left: 0;
+}
+.waiting-clients li {
+  /* background-color: tomato; */
+  margin: 7px 0;
+}
+  
+
   

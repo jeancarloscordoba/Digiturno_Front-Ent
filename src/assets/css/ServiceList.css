@@ -1,21 +1,37 @@
 .service-list {
     background-color: #fff;
-    padding: 20px;
+    height: 75%;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex: 1;
+    padding: 15px;
   }
-  
-  .service-list h2 {
-    margin-bottom: 20px;
-  }
-  
-  .service-list ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .service-list li {
-    margin-bottom: 10px;
-  }
+
+.service-list header {
+  /* background-color: chartreuse; */
+  margin-bottom: 5px;
+}
+.service-list h1 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.service-list main {
+  /* background-color: violet; */
+  margin: 0; 
+}
+.service-list ul {
+  /* background-color: red; */
+  list-style-type: none;
+  padding-left: 0;
+}
+.service-list li {
+  display: flex;  /* Asegura que el input y el label estén en la misma línea */
+  align-items: center; /* Alinea verticalmente el contenido del li */
+  margin: 7px 0;
+}
+
+.service-list input[type="checkbox"] {
+  margin-right: 5px; 
+}
+
   
