@@ -1,20 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../css/WaitingClients.css';
+import clientsData from "../../clientsData.json";
+import GenericComponent from './GenericComponent';
+
+interface Client{
+  id:number;
+  cedula: number;
+  nombre: string;
+  tipoCliente: string;
+  estado: string;
+}
 
 const WaitingClients: React.FC = () => {
+  const [clientes, setClientes] = useState<Client[]>(clientsData.clientsData)
   return (
-    <section className="waiting-clients">
-      <header>
-        <h1>Clientes en espera</h1>
-      </header>
-      <main>
-          <ul>
-            <li>Cliente 1</li>
-            <li>Cliente 2</li>
-            {/* Añade más elementos según sea necesario */}
-          </ul>
-      </main>
-    </section>
+    <GenericComponent title="Clientes en Espera" rightComponent={<div className="number-client"></div>}>
+      <section className="waiting-clients">
+        <ul>
+          {clientes.map((cliente)=>(
+            <li>{cliente.nombre} - {cliente.estado}</li>
+          ))}
+        </ul>
+      </section>
+    </GenericComponent>
   );
 }
 

@@ -1,7 +1,7 @@
 .generic-component {
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     padding: 15px; /*padding general*/
   }
   
@@ -11,8 +11,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 5px;
+    padding-bottom: 6px;
+    /* border-bottom: 1px solid #ccc; */
   }
   
   .generic-header h1 {
@@ -20,9 +20,15 @@
     font-size: 17px;
     font-weight: bold;
     text-align: center;
-    /* margin-bottom: 15px; */
+    margin: 0;
+  }
+
+  .right-component{
+    /* background-color: grey; */
+    /* font-size: 5px;  */
   }
   
   .generic-content {
+    /* background-color: blue; */
     margin: 0;
   }

@@ -5,8 +5,8 @@
   display: flex;
   flex-direction: row;
   /* justify-content: space-between; */
-  border-radius: 15px;
-  padding: 15px;
+  /* border-radius: 15px; */
+  /* padding: 15px; */
 } 
 
 .parte-1 {
@@ -17,12 +17,8 @@
 }
 
 .parte-1-1 {
-  /* background-color: aqua; */
+  background-color: aqua;
   margin-bottom: 10px;
-}
-.parte-1-1 h1 {
-  font-size: 18px; /*Tamaño-titulos-principales */
-  font-weight: bold;
 }
 
 .parte-1-2 {
@@ -65,7 +61,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
 }
 .button i {
   margin-right: 10px; /* Espacio entre el icono y el texto */
