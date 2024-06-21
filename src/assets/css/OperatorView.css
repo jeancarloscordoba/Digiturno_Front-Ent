@@ -10,6 +10,7 @@
     flex: 1;
     padding: 12px;
     gap: 12px; /*Permite dar espacios dinamicos entre elementos, para aplicar margin a todos los div */
+    overflow: hidden;
   }
   
   .left-column,

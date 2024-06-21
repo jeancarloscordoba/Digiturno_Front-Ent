@@ -11,7 +11,7 @@ const ModuleStatus : React.FC = () => {
   }, []);
 
   return (
-   < GenericComponent title="Estado Modulo" rightComponent={<div id="estado" >{estado}</div>}>
+   < GenericComponent title="Estado Modulo" rightComponent={<div id="estado">{estado}</div>} customClass="generic-component-module-status">
         <section className="module-status-content">
           <div className="radio-option">
             <input type='radio' name="estado" id="estado1" onChange={()=>{setEstado("EN LINEA"); 

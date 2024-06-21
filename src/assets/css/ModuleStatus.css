@@ -1,3 +1,8 @@
+.generic-component-module-status {
+  height: 30%;
+  width: 100%;
+}
+
 .module-status-content {
   /* background-color: blue; */
   display: flex;

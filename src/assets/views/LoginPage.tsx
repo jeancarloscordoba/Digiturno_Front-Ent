@@ -12,7 +12,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
 
   const handleLogin = () => {
     onLogin();
-    navigate('/dashboard');
+    navigate('/operator-view');
   };
 
   return (

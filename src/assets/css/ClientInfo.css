@@ -1,9 +1,12 @@
-.client-info {
-  background-color: #fff;
-  height: 40%; /*Alto*/
+.generic-component-client-info {
+  height: 45%; /*Alto*/
   width: 100%; /*Ancho*/
+}
+
+.client-info {
   display: flex;
   flex-direction: row;
+  margin-top: 15px;
   /* justify-content: space-between; */
   /* border-radius: 15px; */
   /* padding: 15px; */
@@ -16,37 +19,35 @@
   flex-direction: column;
 }
 
-.parte-1-1 {
-  background-color: aqua;
-  margin-bottom: 10px;
-}
-
-.parte-1-2 {
-  /* background-color: orangered; */
-  margin: 0;
-}
-.parte-info-1-2-1 {
+.parte-info-1-1 {
   display: flex;
   flex-direction: column;
   font-size: 15px;
 }
-.client-information {
-  /* background-color: #0d4769; */
-  margin-bottom: 8px;
-
+.parte-info-1-1 p { /*Se le quitan los margenes predeterminados a todos los p de la clase*/
+  margin-bottom: 0;
 }
-.c-c { 
-  font-weight: bold;
+.container-cedula { 
+  /* background-color: thistle; */
+  font-weight: 600;
+  align-items: center;
+  /* margin-bottom: 6px; */
+}
+.name-client-attention {
+ /* background-color: #0f7bff; */
+  font-size: 35px;
+  font-weight: 350; 
+  margin-bottom: 10px; 
 }
 
 /******** Botones Modernos ************/
-.button-container-1-3 {
+.button-container-1-2 {
   /* background-color: yellow; */
   display: flex;
   gap: 15px; 
   justify-content: left; /*Horizontal*/
   align-items: center; /*Vertical*/
-  margin-top: 10px;
+  /* padding: 6px 0; */
 }
 .button {
   display: flex;
@@ -61,7 +62,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   color: white;
-  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 .button i {
   margin-right: 10px; /* Espacio entre el icono y el texto */
@@ -83,7 +84,7 @@
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.calification-1-4 {
+.calification-1-3 {
   /* background-color: #107cbb; */
   display: flex; 
   align-items: center;

@@ -1,9 +1,0 @@
-{
-    "clientsData":[ 
-        {"id":1, "cedula":123456, "nombre":"Pedro Picapiedra", "tipoCliente":"Estandar", "estado":"En espera"},
-        {"id":2, "cedula":123457, "nombre":"Pablo Mármol", "tipoCliente":"Estandar", "estado":"En espera"},
-        {"id":3, "cedula":123458, "nombre":"Vilma Palma", "tipoCliente":"Estandar","estado":"En espera"},
-        {"id":4, "cedula":123459, "nombre":"Betty Pinzón", "tipoCliente":"Preferencial", "estado":"En espera"},
-        {"id":5, "cedula":123455, "nombre":"Roberto Orellana", "tipoCliente":"Tramitador", "estado":"En espera"}
-    ]
-}

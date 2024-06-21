@@ -1,0 +1,14 @@
+{
+    "testUser":[ 
+        {"id":1, "cedula":1003894562, "nombre":"María Isabel Gómez Rodríguez", "tipoCliente":"Estandar", "estado":"En espera"},
+        {"id":2, "cedula":1065237849, "nombre":"Juan Carlos Fernández López", "tipoCliente":"Estandar", "estado":"En espera"},
+        {"id":3, "cedula":1066123458, "nombre":"Ana Patricia Martínez Sánchez", "tipoCliente":"Estandar","estado":"En espera"},
+        {"id":4, "cedula":77693256, "nombre":"Luis Alberto Ramírez Torres", "tipoCliente":"Preferencial", "estado":"En espera"},
+        {"id":5, "cedula":1066891234, "nombre":"Sofía Elena Ruiz Morales", "tipoCliente":"Tramitador", "estado":"En espera"},
+        {"id":6, "cedula":1003123456, "nombre":"Isabel Catalina Sarpa Eunecia Prada de la Cruz ", "tipoCliente":"Preferencial", "estado":"En espera"},
+        {"id":7, "cedula":1065765432, "nombre":"Pedro Garcia Banderas", "tipoCliente":"Estandar", "estado":"En espera"},
+        {"id":8, "cedula":1066456789, "nombre":"Juan Fernando López Martínes", "tipoCliente":"Preferencial", "estado":"En espera"},
+        {"id":9, "cedula":77898765, "nombre":"Ana Sofía Pérez Gámez", "tipoCliente":"Tramitador", "estado":"En espera"},
+        {"id":10, "cedula":1003456789, "nombre":"Valeria Alejandra Gimenez Mercado", "tipoCliente":"Tramitador", "estado":"En espera"}
+    ]
+}

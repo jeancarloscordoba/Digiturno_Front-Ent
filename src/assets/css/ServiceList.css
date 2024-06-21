@@ -1,10 +1,11 @@
 .service-list {
-    background-color: #fff;
-    height: 75%;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-  }
+  background-color: white;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.generic-component-service-list {
+  height: 75%;
+}
 
 .service-list header {
   /* background-color: chartreuse; */

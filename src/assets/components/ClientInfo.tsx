@@ -1,5 +1,5 @@
 import '../css/ClientInfo.css';
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css'; 
 import { Modal} from 'react-bootstrap';
 import GenericComponent from './GenericComponent';
@@ -12,17 +12,29 @@ const messages: { [key: number]: string } = {
   4: "Excelente",
 };
 
+interface Client {
+  id: number;
+  cedula: number;
+  nombre: string;
+  tipoCliente: string;
+  estado: string;
+}
+
 interface ClientInfoProps {
   onRequestDevice: () => void;
   hid: HIDDevice | null;
+  clienteEnAtencion: Client | null;
 }
 
-const ClientInfo: React.FC<ClientInfoProps> = ({ onRequestDevice, hid }) => {
+const ClientInfo: React.FC<ClientInfoProps> = ({ onRequestDevice, hid, clienteEnAtencion }) => {
   const [show, setShow] = useState<boolean>(false);
   const [data, setData] = useState<string | null>(null);
 
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
+
+  //  // Estado para almacenar el nombre del cliente enviado desde WaitingClients
+  //  const clienteEnEspera:string= attentionClient; 
 
   const handleHIDInput = async () => {
     if (hid) {
@@ -75,19 +87,29 @@ const ClientInfo: React.FC<ClientInfoProps> = ({ onRequestDevice, hid }) => {
     await handleHIDInput();
   };
 
+  //Se le pone separadores de millares a las cedulas
+  const formatteCedula = useMemo(() => { //Se usa useMemo para memorizar el numero formateado
+    //Se usa el metodo toLocaleString para convertir el numero en cadena con notación local espesifica 
+    return clienteEnAtencion ? clienteEnAtencion.cedula.toLocaleString() : ""; 
+  }, [clienteEnAtencion]
+);
+
   return (
-    <GenericComponent title="Cliente en Atención">
+    <GenericComponent title="Cliente en Atención" customClass="generic-component-client-info">
       <section className="client-info">
         <div className="parte-1">
 
-          <div className="parte-1-2"> 
-            <div className="parte-info-1-2-1">
-              <span className="client-information">Información del Cliente:</span>
-              <span className="c-c">C.C.</span>
+          <div className="parte-info-1-1"> 
+            <div className="container-cedula">
+              <p>C.C. {formatteCedula}</p>
+            </div>
+
+            <div className="name-client-attention">
+              {clienteEnAtencion && clienteEnAtencion.nombre}
             </div>
           </div>
 
-          <div className="button-container-1-3">
+          <div className="button-container-1-2">
             <button className="button attended" onClick={startQualification}>
               <i className="fas fa-check"></i> 
                 ATENDIDO
@@ -109,7 +131,7 @@ const ClientInfo: React.FC<ClientInfoProps> = ({ onRequestDevice, hid }) => {
           </Modal>
 
           {data !== null && (
-            <div className="calification-1-4">
+            <div className="calification-1-3">
               <p>Datos recibidos del dispositivo: <strong>{data}</strong></p>
             </div>
             )
@@ -128,6 +150,9 @@ const ClientInfo: React.FC<ClientInfoProps> = ({ onRequestDevice, hid }) => {
           </div>
         </div>
       </section>  
+      
+      {/* Renderiza el componente WaitingClients y pasa la función handleUploadClient */}
+      {/* <WaitingClients onDistract={() => {}} onUploadClient={handleUploadClient}/> */}
     </GenericComponent>
   );
 }
